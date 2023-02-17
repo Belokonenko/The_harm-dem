@@ -405,6 +405,11 @@ ul {
   border-bottom: 2px solid #18CFAB;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
 .header {
   position: absolute;
   width: 100%;
@@ -541,6 +546,7 @@ ul {
     -ms-grid-columns: max-content 1fr max-content;
     grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
     grid-template-columns: max-content 1fr max-content;
+    padding: 0 10px;
   }
   .header__logo {
     -ms-flex-item-align: center;
@@ -796,6 +802,7 @@ ul {
 }
 .services {
   text-align: center;
+  margin: 90px auto;
 }
 .services__tab {
   display: -ms-grid;
@@ -814,7 +821,6 @@ ul {
 }
 .services__list-btn .item-btn {
   position: relative;
-  width: 100%;
   padding: 1em 0;
   background-color: #fff;
   border: 3px solid transparent;
@@ -835,10 +841,9 @@ ul {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   background-color: #18CFAB;
-  z-index: -10;
 }
 .services__list-cards .card {
   display: none;
@@ -853,12 +858,28 @@ ul {
   display: grid;
 }
 .services__list-cards .card img {
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 15px;
+}
+.services__list-cards .card p {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  max-height: 140px;
+  overflow: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13.645px;
+  line-height: 24px;
+  color: #777777;
 }
 @media (max-width: 992px) {
+  .services__list-btn .item-btn--active::before {
+    display: none;
+  }
   .services__list-btn {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -882,6 +903,9 @@ ul {
     height: 200px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .services__list-cards .card p {
+    padding: 0 20px;
   }
 }
 .ready {
@@ -1287,12 +1311,22 @@ ul {
       align-self: center;
 }
 .about__slaider .wrap-btn .slide-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  border-radius: 20%;
   background-color: transparent;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border: 1px solid rgba(187, 187, 187, 0.3);
 }
 .about__slaider .wrap-btn .slide-btn:hover {
@@ -1365,6 +1399,9 @@ ul {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin: 4px;
+  }
+  .about .desc {
+    height: 300px;
   }
 }
 @media (max-width: 320px) {
@@ -1469,6 +1506,7 @@ ul {
   background-color: #1C2A33;
 }
 .copyright__text {
+  text-align: center;
   font-style: normal;
   font-weight: 300;
   font-size: 0.9rem;
